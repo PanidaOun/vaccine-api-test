@@ -52,6 +52,11 @@ class reservationApiTest(unittest.TestCase):
         self.assertEqual(
             response_body, {'detail': 'No reservation with this id'})
 
+    def test_server(self):
+        """Test the server"""
+        response = requests.get("https://flamxby.herokuapp.com/reservation/7")
+        self.assertEqual(response.headers["Server"], "uvicorn")
+
 
 if __name__ == '__main__':
     unittest.main()
