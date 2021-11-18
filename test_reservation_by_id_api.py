@@ -37,6 +37,5 @@ class reservationApiTest(unittest.TestCase):
         response_body = response.json()
         self.assertEqual(response_body,{'detail': 'No reservation with this id'})
 
-
 if __name__ == '__main__':
     unittest.main()
